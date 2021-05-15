@@ -1,0 +1,26 @@
+{
+  "name": "osrec-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build",
+    "dev": "npm run dev:postcss && concurrently -c cyan npm:dev:eleventy",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --config=eleventy.config.js --serve",
+    "dev:postcss": "postcss src/index.css -o build/css/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@prettier/plugin-pug": "^1.15.2",
+    "autoprefixer": "^10.2.5",
+    "concurrently": "^6.1.0",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.3.0",
+    "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {}
+}
